@@ -6,11 +6,11 @@
 
  ## To Do:
 
- *Implement ``HLT`` instruction.
-    *Possibly add a ``start()`` method to start the clock on it's own, instead of needing an external clock call
+ * Implement ``HLT`` instruction.
+    * Possibly add a ``start()`` method to start the clock on it's own, instead of needing an external clock call
  * Remove dependency on ``maxCycles`` in ``test.cpp``
- *~Better~ Some form of GUI
- *Better hex code (opcodes) input
- *8085 pnemonic-to-opcode converter?
- *Improve debugging methods
+ * ~Better~ Some form of GUI
+ * Better hex code (opcodes) input
+ * 8085 pnemonic-to-opcode converter?
+ * Improve debugging methods
  
