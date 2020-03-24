@@ -138,12 +138,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="NOTES.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Blog.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="Bus.cpp" />
     <ClCompile Include="mp8085.cpp" />
     <ClCompile Include="test.cpp" />

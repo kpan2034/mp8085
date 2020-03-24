@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="NOTES.md" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="Bus.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -35,8 +32,5 @@
     <ClInclude Include="mp8085.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Blog.txt" />
   </ItemGroup>
 </Project>
