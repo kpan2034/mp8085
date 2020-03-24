@@ -11,6 +11,6 @@
  * Remove dependency on ``maxCycles`` in ``test.cpp``
  * ~Better~ Some form of GUI
  * Better hex code (opcodes) input
- * 8085 pnemonic-to-opcode converter?
+ * 8085 mnemonic-to-opcode converter?
  * Improve debugging methods
  
