@@ -69,6 +69,16 @@ void mp8085::reset()
 	cycles = 8;
 }
 
+// Start mp using internal clock
+void mp8085::start()
+{
+	is_running = true;
+	while (is_running) {
+		this->clock();
+	}
+}
+
+// External clock support
 void mp8085::clock()
 {
 	// Do stuff:
@@ -101,6 +111,30 @@ void mp8085::clock()
 	// Or don't:
 	cycles--;
 }
+
+void mp8085::irq(uint8_t n)
+{
+	// 0-3 === 4.5->7.5
+
+	if (n == 0 || interrupt_enable) 
+	{
+		// push current instruction on stack
+		uint8_t lo = pc & 0x00FF;
+		uint8_t hi = (pc & 0xFF00) >> 8;
+		write(sp++, hi);
+		write(sp++, lo);
+
+		// push psw
+		lo = GetRegister(REGISTER::F);
+		hi = a;
+		write(sp++, hi);
+		write(sp++, lo);
+
+		// get ISR location
+			pc = uint16_t((float(n)+ 4.5) * 8);
+	}
+}
+
 
 //------------------------------------HELPER FUNCTIONS--------------------------------
 uint8_t mp8085::GetFlag(FLAGS f)
@@ -1076,7 +1110,8 @@ void mp8085::CALL()
 
 void mp8085::HLT()
 {
-
+	//76
+	is_running = false;
 }
 
 void mp8085::ADI()

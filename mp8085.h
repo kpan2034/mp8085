@@ -66,9 +66,9 @@ public:
 	// Remember that 8085 has Von Neumann architecture
 
 	void reset();
-	void irq(); // When you get an interrupt request
-	void trap(); // h/w line ignored
-	void clock();
+	void start(); // signal to start the cpu
+	void clock(); // Can use external clock directly
+	void irq(uint8_t n);   // When you get an interrupt request
 
 	void ConnectBus(Bus* n) { bus = n; }
 
@@ -112,6 +112,7 @@ private:
 	Bus* bus = nullptr;
 	uint8_t mask = 0b00000000;
 	bool interrupt_enable = true;
+	bool is_running = false;
 
 	// The two main things that a microproccesor does
 	void	write(uint16_t addr, uint8_t data);
