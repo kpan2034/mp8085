@@ -5,9 +5,9 @@
 
  ## To Do:
 
- * Implement ``HLT`` instruction.
-    * Possibly add a ``start()`` method to start the clock on its own, instead of needing an external clock call
- * Remove dependency on ``maxCycles`` in ``test.cpp``
+ * ~Implement ``HLT`` instruction.~
+    * ~Possibly add a ``start()`` method to start the clock on its own, instead of needing an external clock call~
+ * ~Remove dependency on ``maxCycles`` in ``test.cpp``~
  * ~Better~ Some form of GUI
  * Better hex code (opcodes) input
  * 8085 mnemonic-to-opcode converter?
